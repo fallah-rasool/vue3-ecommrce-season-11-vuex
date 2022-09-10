@@ -139,24 +139,7 @@
                                 </div>
 
 
-                                <div class="controls">
-                                    <Multiselect
-                                        :options="colorsOptions"
-                                        v-model="selectedColor"
-                                        placeholder="گزینه خود را انتخاب کنید"
-                                    />
-                                    <Multiselect v-model="selectedLang"
-                                        :options="langOptions"
-                                        :multiple="true"                                        
-                                        :close-on-select="false" 
-                                        :clear-on-select="false" 
-                                        
-                                        label="name"
-                                        track-by="name" 
-                                        placeholder="گزینه خود را انتخاب کنید"
-                                    />
-
-                                </div>
+                           <!--  -->
 
 
 
@@ -267,9 +250,7 @@ import Comments from '../components/productTab/Comments.vue'
 
 import moment from 'moment'
 import jalaali from 'moment-jalaali'
-import Multiselect from 'vue-multiselect'
 
-import 'vue-multiselect/dist/vue-multiselect.min.css'
 
 import '../assets/css/modal.css'
 
@@ -277,15 +258,13 @@ export default {
 
     name:"Product",
     components: {
-        Multiselect,
+
         SwiperSlider,
         Details,
         Fields,
         Comments
     },
-    metaInfo:{
-            title:"نمایش محصول "
-    },
+
     data:()=>({
             dateNow_Jalaali:jalaali().format('jYYYY/jM/jD'),
 
