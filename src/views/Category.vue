@@ -170,6 +170,14 @@
                     <li class="breadcrumb-item"><a href=""><span class="">فهرست محصولات</span></a></li>
                     <li class="breadcrumb-item"><a href=""><span class="">محصول شماره یک</span></a></li>
                 </ul>
+                
+                
+                
+                <!-- <h1>{{ user.name }}</h1> -->
+                <!-- <h1>{{ useraccout.name }}</h1> -->
+                <h1>{{ userName }}</h1>
+
+
                 <div class="store-compact-products">
 
                     <div class="row no-gutters">
@@ -214,6 +222,8 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
         name:"Category",
 
@@ -222,12 +232,24 @@ export default {
             isColorOpen:true,
             selectFilter:[]
         }),
-        computed:{
-            products(){
-                return this.$store.state.products
-            }
-        },
-         created(){
+
+      //  computed: mapState(['products','user']),
+       
+       computed:{
+             numberOne(){
+                return 1
+            },
+            // ...mapState(['products','user'])
+             ...mapState({
+               products: 'products',
+              // useraccout: 'userstate'
+              userName:state=>state.userstate.name
+             })
+
+        } ,
+
+
+        created(){
              this.$store.dispatch('getProducts')
         },
         methods:{

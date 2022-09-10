@@ -1,12 +1,13 @@
 import { createStore} from 'vuex'
 import axios from 'axios'
 
+
 const store = createStore({
-        state(){
-                return {
-                        products:[]
-                }
-        },
+        state:()=>({
+                        products:[],
+                      //  user:{name:"rasol",id:1}
+                      userstate:{name:"rasol",id:1}
+        }),
         mutations:{
                 SET_PRODUCTS(state, data){
                         state.products = data
