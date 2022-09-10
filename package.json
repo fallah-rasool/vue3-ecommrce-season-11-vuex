@@ -12,7 +12,8 @@
     "moment-jalaali": "^0.9.6",
     "swiper": "^8.3.2",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

@@ -23,6 +23,10 @@ export default {
         BeseHeader,
         BeasFooter
     },
+    created(){
+      console.log(this.$store.state.products)
+
+    },
     methods:{
       handelSidbar(showsidbar){       
         this.isShowsidBar = showsidbar;
