@@ -35,7 +35,7 @@
                                                         <div class="row no-gutters item-center product-row flex-space-between">
                                                                 <div class="d-flex">
                                                                         <div class="col-auto c-avater">
-                                                                                <img src="img/profile.jpg" class="product-comment-avatar-image">
+                                <img src="@/assets/img/profile.jpg" class="product-comment-avatar-image">
                                                                         </div>
                                                                         <div class="col-7 product-comment-author-and-time">
                                                                                 <div class="d-flex item-center product-comment--author">
@@ -70,7 +70,7 @@
                                                         <div class="row no-gutters item-center product-row flex-space-between">
                                                                 <div class="d-flex">
                                                                 <div class="col-auto c-avater">
-                                                                        <img src="img/profile.jpg" class="product-comment-avatar-image">
+                                <img src="@/assets/img/profile.jpg" class="product-comment-avatar-image">
                                                                 </div>
                                                                 <div class="col-7 product-comment-author-and-time">
                                                                         <div class="d-flex item-center product-comment--author">
@@ -102,7 +102,7 @@
                                                                         <div class="row no-gutters item-center product-row flex-space-between">
                                                                                 <div class="d-flex">
                                                                                         <div class="col-auto c-avater">
-                                                                                        <img src="img/profile.jpg" class="product-comment-avatar-image">
+                       <img src="@/assets/img/profile.jpg" class="product-comment-avatar-image">
                                                                                         </div>
                                                                                         <div class="col-7 product-comment-author-and-time">
                                                                                         <div class="d-flex item-center product-comment--author">
@@ -143,7 +143,7 @@
                                                 <div class="row no-gutters item-center product-row flex-space-between">
                                                         <div class="d-flex">
                                                         <div class="col-auto c-avater">
-                                                                <img src="img/profile.jpg" class="product-comment-avatar-image">
+                                                                <img src="@/assets/img/profile.jpg" class="product-comment-avatar-image">
                                                         </div>
                                                         <div class="col-7 product-comment-author-and-time">
                                                                 <div class="d-flex item-center product-comment--author">
@@ -176,7 +176,7 @@
                                                                                 <div class="row no-gutters item-center product-row flex-space-between">
                                                                                 <div class="d-flex">
                                                                                         <div class="col-auto c-avater">
-                                                                                        <img src="img/profile.jpg" class="product-comment-avatar-image">
+                                <img src="@/assets/img/profile.jpg" class="product-comment-avatar-image">
                                                                                         </div>
                                                                                         <div class="col-7 product-comment-author-and-time">
                                                                                         <div class="d-flex item-center product-comment--author">
@@ -211,7 +211,7 @@
                                                                                                 <div class="row no-gutters item-center product-row flex-space-between">
                                                                                                         <div class="d-flex">
                                                                                                         <div class="col-auto c-avater">
-                                                                                                                <img src="img/profile.jpg" class="product-comment-avatar-image">
+                                                                                                                <img src="@/assets/img/profile.jpg" class="product-comment-avatar-image">
                                                                                                         </div>
                                                                                                         <div class="col-7 product-comment-author-and-time">
                                                                                                                 <div class="d-flex item-center product-comment--author">

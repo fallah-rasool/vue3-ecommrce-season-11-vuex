@@ -24,7 +24,7 @@ export default {
         BeasFooter
     },
     created(){
-      console.log(this.$store.state.products)
+        
 
     },
     methods:{

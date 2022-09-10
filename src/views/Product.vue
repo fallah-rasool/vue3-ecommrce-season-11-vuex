@@ -233,11 +233,6 @@
 
 </main>
 
-
-
-
-
-
   
 </template>
 
@@ -322,7 +317,7 @@ export default {
 
     created(){
 
-      this.timeInterval =  setInterval(() => {
+        this.timeInterval =  setInterval(() => {
                 let diffTime= this.dataCountDown.diff(moment())
                 let durationTime= moment.duration(diffTime)
                 this.diffDay = Math.floor(durationTime.asDays()) 
@@ -330,6 +325,12 @@ export default {
                 this.diffMinutes =  durationTime.minutes()
                 this.diffSeconds =  durationTime.seconds()
                 }, 1000);
+
+       
+
+        
+
+
   
     },
 
