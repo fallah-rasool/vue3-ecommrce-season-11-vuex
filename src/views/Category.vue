@@ -173,9 +173,9 @@
                 
                 
                 
-                <!-- <h1>{{ user.name }}</h1> -->
+                <!-- <h1>{{ user.name }}</h1>  -->
                 <!-- <h1>{{ useraccout.name }}</h1> -->
-                <h1>{{ userName }}</h1>
+                 <h1>{{ userName }}</h1> 
 
 
                 <div class="store-compact-products">
@@ -224,6 +224,10 @@
 <script>
 import {mapState} from 'vuex'
 import { mapGetters} from 'vuex'
+
+
+
+
 export default {
         name:"Category",
 
