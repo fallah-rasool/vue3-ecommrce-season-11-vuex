@@ -111,7 +111,11 @@
                             <div class="product__left">
                                 <div class="product__category">دسته وب</div>
                                 <div class="product__info">
-                                        <h1 class="product__title">محصول شماره یک یک شماره </h1>
+                                        <h1 class="product__title">محصول 
+                                            
+                                            {{ product?.name }}  
+
+                                        </h1>
 
                                         <div class="rating">
                                             <div class="rating__star">
@@ -311,7 +315,8 @@ export default {
                 {img :(require('../assets/img/slideshow/3.png'))},            
                 {img :(require('../assets/img/slideshow/4.png'))},
             ],
-            activeTab:'tab-box_1'
+            activeTab:'tab-box_1',
+            product:{}
     }),
 
 
@@ -328,9 +333,15 @@ export default {
 
        
 
-        
+        this.product = this.$store.getters.getProductById(parseInt(this.$route.params.id))
 
+        if(!this.product){
 
+            this.$store.dispatch('getProducts')
+            .then(() => {
+                this.product = this.$store.getters.getProductById(parseInt(this.$route.params.id))
+            })
+        }
   
     },
 

@@ -182,11 +182,11 @@
 
                     <div class="row no-gutters">
                         <div class="col-4 bm-15" 
-                        v-for="(item,index) in products" :key="item.id">
+                        v-for="item in products" :key="item.id">
 
                             <div class="c-product-box">
                            
-                               <router-link :to="{ name :'product' ,params:{id : index}}"
+                               <router-link :to="{ name :'product' ,params:{id : item.id}}"
                                  class="c-product-box__link">
                                     <img :src="require(`../assets/img/banner/mobile/${item.id}.jpg`)" 
 
@@ -197,7 +197,7 @@
 
                                 <div class="c-product-box__title">
 
-                                    <router-link :to="{ name:'product' ,params:{id : index}}">
+                                    <router-link :to="{ name:'product' ,params:{id :item.id}}">
                                         {{item.name}}
                                     </router-link>
                                 </div>
@@ -223,7 +223,7 @@
 
 <script>
 import {mapState} from 'vuex'
-
+import { mapGetters} from 'vuex'
 export default {
         name:"Category",
 
@@ -233,20 +233,48 @@ export default {
             selectFilter:[]
         }),
 
-      //  computed: mapState(['products','user']),
+
+        //   computed:{
+        //     products(){
+        //         return this.$store.state.products
+        //     },
+        //     user(){
+        //          return this.$store.state.user
+        //     }
+        // },
+        
+
+    //  computed: mapState(['products','user']),
        
-       computed:{
-             numberOne(){
+    //    computed:{
+    //          numberOne(){
+    //             return 1
+    //         },
+    //         // ...mapState(['products','user'])
+    //         //  ...mapState({
+    //         //    products: 'products',
+    //         //   // useraccout: 'userstate'
+    //         //   userName:state=>state.userstate.name
+    //         //  })
+
+    //     } ,
+
+// *****************  getters *******************
+            computed:{
+            numberOne(){
                 return 1
             },
-            // ...mapState(['products','user'])
-             ...mapState({
-               products: 'products',
-              // useraccout: 'userstate'
-              userName:state=>state.userstate.name
-             })
+            // products(){
+            //     return this.$store.getters.products
+                //   return state.products.slice(0, 4)
+            // },
+            // userName(){
+            //     return this.$store.getters.userName
+            // },
 
-        } ,
+            ...mapGetters(['products','userName'])           
+        },
+
 
 
         created(){

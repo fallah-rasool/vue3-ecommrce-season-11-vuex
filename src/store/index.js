@@ -4,10 +4,35 @@ import axios from 'axios'
 
 const store = createStore({
         state:()=>({
-                        products:[],
-                      //  user:{name:"rasol",id:1}
-                      userstate:{name:"rasol",id:1}
+                      products:[],
+                //    userstate:{name:"rasool", id:1}
+                      user:{name:"rasol",id:1}
+                     
         }),
+        getters:{
+                // products(state){
+                //   return state.products
+                // },
+
+                // getProductById:(state)=>(id)=>{
+                //         return state.products.find(product=>product.id === id)
+                // },
+                  
+                // userName(state){
+                //   return state.user.name
+                // }
+
+
+                products: state => state.products,
+
+                getProductById:(state)=>(id)=>state.products.find(product=>product.id === id),   
+
+                name: state => state.user.name
+            
+        },
+            
+
+
         mutations:{
                 SET_PRODUCTS(state, data){
                         state.products = data
