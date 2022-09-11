@@ -223,7 +223,7 @@
 
 <script>
 import {mapState} from 'vuex'
-import { mapGetters} from 'vuex'
+import { mapGetters,mapActions } from 'vuex'
 
 
 
@@ -282,7 +282,16 @@ export default {
 
 
         created(){
-             this.$store.dispatch('getProducts')
+            //  this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk"})
+            // this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk",id:15})
+
+
+
+
+               this.getProducts({text:"jhjhkkhkhkjhk",id:15})
+
+
+
         },
         methods:{
             removeAll(){
@@ -291,7 +300,8 @@ export default {
             removeFilter(filter){
                     this.selectFilter=this.selectFilter.filter((item) => item !== filter
                 )
-            }
+            },
+            ...mapActions(['getProducts'])
         }
 }
 </script>
