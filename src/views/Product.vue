@@ -250,7 +250,7 @@ import Comments from '../components/productTab/Comments.vue'
 
 import moment from 'moment'
 import jalaali from 'moment-jalaali'
-import {SET_PRODUCTS_MUTATIONS } from '@/store/type'
+import {SET_PRODUCTS_MUTATIONS } from '@/store/modules/products/type'
 import {mapMutations} from 'vuex'  
 
 

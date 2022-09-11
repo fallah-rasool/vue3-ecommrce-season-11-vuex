@@ -173,9 +173,14 @@
                 
                 
                 
-                <!-- <h1>{{ user.name }}</h1>  -->
+                 <!-- <h1>{{ user}}</h1>   -->
                 <!-- <h1>{{ useraccout.name }}</h1> -->
-                 <h1>{{ userName }}</h1> 
+                   <!-- <h1>{{ userName }}</h1> -->
+                   <h1>{{ name }}</h1>
+
+                  
+
+                  
 
 
                 <div class="store-compact-products">
@@ -234,7 +239,8 @@ export default {
         data:()=>({
             isBrandOpen:true,
             isColorOpen:true,
-            selectFilter:[]
+            selectFilter:[],
+            name :null
         }),
 
 
@@ -285,8 +291,9 @@ export default {
             //  this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk"})
             // this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk",id:15})
 
+                console.log(this.$store.state.user.user.name)
 
-
+                this.name =this.$store.state.user.user.name
 
               // this.getProducts({text:"jhjhkkhkhkjhk",id:15})
                this.getProducts({text:"jhjhkkhkhkjhk"})

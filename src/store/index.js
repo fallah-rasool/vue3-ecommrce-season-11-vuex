@@ -2,16 +2,19 @@ import { createStore} from 'vuex'
 // import axios from 'axios'
 // import {SET_PRODUCTS_MUTATIONS } from './type'
 
-import state from './state'
-import getters from './getters'
-import mutations from './mutations'
-import actions from './actions'
+// import state from './state'
+// import getters from './getters'
+// import mutations from './modules/products/mutations'
+// import actions from './actions'
+
+import user from './modules/user'
+import products from './modules/products'
 
 const store = createStore({
-        state,
-        getters,
-        mutations,
-        actions
+        modules:{
+                user,
+                products
+        }
 
 })
 
