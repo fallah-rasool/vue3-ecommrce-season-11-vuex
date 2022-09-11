@@ -282,7 +282,15 @@ export default {
             //     return this.$store.getters.userName
             // },
 
-            ...mapGetters(['products','userName'])           
+            // ...mapGetters(['products','userName']) 
+                //  ...mapGetters({
+                //     products: 'products',
+                //     userName:'name'
+                // })
+                ...mapGetters('products',['products']),
+                ...mapGetters('user',{userName:'name'})
+
+          
         },
 
 
@@ -298,7 +306,7 @@ export default {
               // this.getProducts({text:"jhjhkkhkhkjhk",id:15})
                this.getProducts({text:"jhjhkkhkhkjhk"})
 
-
+ console.log(this.$store.getters.name)
 
         },
         methods:{
@@ -309,7 +317,8 @@ export default {
                     this.selectFilter=this.selectFilter.filter((item) => item !== filter
                 )
             },
-            ...mapActions(['getProducts'])
+           // ...mapActions(['getProducts'])
+           ...mapActions('products',['getProducts'])
         }
 }
 </script>

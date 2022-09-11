@@ -1,5 +1,7 @@
 export default {
 
+          namespaced :true,
+
         state : ()=> ({
                 user:{name:"rasool", id:1},
                 isLogged:true
