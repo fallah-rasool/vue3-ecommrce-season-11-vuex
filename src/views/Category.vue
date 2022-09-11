@@ -288,7 +288,8 @@ export default {
 
 
 
-               this.getProducts({text:"jhjhkkhkhkjhk",id:15})
+              // this.getProducts({text:"jhjhkkhkhkjhk",id:15})
+               this.getProducts({text:"jhjhkkhkhkjhk"})
 
 
 
