@@ -342,6 +342,7 @@ export default {
                 this.product = this.$store.getters.getProductById(parseInt(this.$route.params.id))
             })
         }
+        
   
     },
 
