@@ -12,7 +12,7 @@ import products from './modules/products'
 
 const store = createStore({
         modules:{
-                user,
+                userName :  user,
                 products
         }
 

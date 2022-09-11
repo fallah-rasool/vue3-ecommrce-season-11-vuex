@@ -288,7 +288,8 @@ export default {
                 //     userName:'name'
                 // })
                 ...mapGetters('products',['products']),
-                ...mapGetters('user',{userName:'name'})
+                // ...mapGetters('user',{userName:'name'})
+                ...mapGetters('userName',{userName:'name'})
 
           
         },
@@ -299,14 +300,26 @@ export default {
             //  this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk"})
             // this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk",id:15})
 
-                console.log(this.$store.state.user.user.name)
+             this.$store.dispatch('products/getProducts',{text:"jhjhkkhkhkjhk"})
 
-                this.name =this.$store.state.user.user.name
+            // console.log(this.$store.state.user.user.name)
 
-              // this.getProducts({text:"jhjhkkhkhkjhk",id:15})
-               this.getProducts({text:"jhjhkkhkhkjhk"})
+            // this.name =this.$store.state.user.user.name
+            
+            //console.log(this.$store.state.userName.user.name)
 
- console.log(this.$store.getters.name)
+            this.name =this.$store.state.userName.user.name
+
+            // this.getProducts({text:"jhjhkkhkhkjhk",id:15})
+            this.getProducts({text:"jhjhkkhkhkjhk"})
+
+           // console.log(this.$store.getters.name)
+
+
+           console.log(this.$store.getters['userName/name'])
+
+           console.log(this.$store.getters['products/name'])
+
 
         },
         methods:{
