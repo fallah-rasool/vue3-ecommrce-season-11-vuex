@@ -23,6 +23,7 @@ export default {
 
              
              
+              
                context.dispatch('userName/userLpg',null,{root:true})
         
                
