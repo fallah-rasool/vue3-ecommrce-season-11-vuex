@@ -11,7 +11,7 @@ export default {
            },
           actions:{
                userLpg(){
-               console.log('user Logged')
+             //  console.log('user Logged')
                }
           }
 

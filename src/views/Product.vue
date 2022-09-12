@@ -253,6 +253,8 @@ import jalaali from 'moment-jalaali'
 import {SET_PRODUCTS_MUTATIONS } from '@/store/modules/products/type'
 import {mapMutations} from 'vuex'  
 
+// import products from '@/store/modules/products'
+
 
 import '../assets/css/modal.css'
 
@@ -324,6 +326,14 @@ export default {
 
 
   async  created(){
+       
+       // this.$store.registerModule('products', products)
+
+        //    if (!this.$store.hasModule('userName')) {
+              
+        //        this.$store.registerModule('userName', user)
+
+        //     }
 
         this.timeInterval =  setInterval(() => {
                 let diffTime= this.dataCountDown.diff(moment())
@@ -336,7 +346,7 @@ export default {
 
        
 
-        this.product = this.$store.getters.getProductById(parseInt(this.$route.params.id))
+        this.product = this.$store.getters['products/getProductById'](parseInt(this.$route.params.id))
 
         if(!this.product){
 
@@ -356,7 +366,7 @@ export default {
 
                 this.SET_PRODUCTS(data)
 
-         this.product = this.$store.getters.getProductById(parseInt(this.$route.params.id))
+         this.product = this.$store.getters['products/getProductById'](parseInt(this.$route.params.id))
 
         }
 
@@ -401,7 +411,7 @@ export default {
            
         this.showRate = true
         },
-        ...mapMutations([SET_PRODUCTS_MUTATIONS])  
+        ...mapMutations('products',[SET_PRODUCTS_MUTATIONS])  
     
 
   },

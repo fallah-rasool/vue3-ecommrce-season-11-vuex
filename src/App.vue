@@ -13,6 +13,11 @@
 <script>
 import BeseHeader from './components/BeseHeader.vue'
 import BeasFooter from './components/BeasFooter.vue'
+
+import user from '@/store/modules/user'
+import products from '@/store/modules/products'
+
+
 export default {
     name:"App",
 
@@ -24,6 +29,10 @@ export default {
         BeasFooter
     },
     created(){
+
+      this.$store.registerModule('userName', user)
+      this.$store.registerModule('products', products)
+
         
 
     },

@@ -7,14 +7,14 @@ import { createStore} from 'vuex'
 // import mutations from './modules/products/mutations'
 // import actions from './actions'
 
-import user from './modules/user'
-import products from './modules/products'
+// import user from './modules/user'
+// import products from './modules/products'
 
 const store = createStore({
-        modules:{
-                userName :  user,
-                products
-        }
+        // modules:{
+        //         userName :  user,
+        //         products
+        // }
 
 })
 

@@ -230,6 +230,8 @@
 import {mapState} from 'vuex'
 import { mapGetters,mapActions } from 'vuex'
 
+// import user from '@/store/modules/user'
+// import products from '@/store/modules/products'
 
 
 
@@ -300,7 +302,27 @@ export default {
             //  this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk"})
             // this.$store.dispatch('getProducts',{text:"jhjhkkhkhkjhk",id:15})
 
-             this.$store.dispatch('products/getProducts',{text:"jhjhkkhkhkjhk"})
+            // this.$store.registerModule('userName', user)
+
+            // this.$store.registerModule('products', products)
+
+            // if (!this.$store.hasModule('userName')) {
+              
+            //    this.$store.registerModule('userName', user)
+
+            // }
+
+            // if(! this.$store.hasModule('products')){
+            //     this.$store.registerModule('products', products)
+            // }
+
+
+
+
+
+            this.$store.dispatch('products/getProducts',{text:"jhjhkkhkhkjhk"})
+          
+          
 
             // console.log(this.$store.state.user.user.name)
 
